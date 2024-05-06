@@ -98,4 +98,4 @@ def index():
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     init_db()  # Initialize the database and table
-    app.run(debug=True, host='10.48.10.210', port=port)
+    app.run(debug=True, host='10.48.10.177', port=port)
