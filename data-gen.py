@@ -13,8 +13,7 @@ def generate_test_data(num_contacts):
     for i in range(num_contacts):
         name = f'Test Name {i}'
         phone = f'123-456-789{i}'
-        email = f'test_email_{i}@example.com'  # Add email address
-        db.execute('INSERT INTO contacts (name, phone, email) VALUES (?, ?, ?)', (name, phone, email))  # Include email in INSERT statement
+        db.execute('INSERT INTO contacts (name, phone) VALUES (?, ?)', (name, phone))
     db.commit()
     print(f'{num_contacts} test contacts added to the database.')
     db.close()
